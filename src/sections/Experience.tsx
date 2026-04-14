@@ -4,7 +4,17 @@ import { experiences } from '../data/experience';
 import { Card } from '../components/Card';
 import { Calendar, Briefcase } from 'lucide-react';
 
+interface ExperienceItem {
+  id: number;
+  role: string;
+  company: string;
+  period: string;
+  description?: string;
+}
+
 export const Experience = () => {
+  const experienceData = experiences as ExperienceItem[];
+
   return (
     <section id="experience" className="py-24 relative z-10 bg-surface/30 border-y border-surface-border/30">
       <div className="container mx-auto px-6 max-w-4xl">
@@ -18,7 +28,7 @@ export const Experience = () => {
           <div className="absolute left-0 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-px bg-gradient-to-b from-primary via-secondary to-accent opacity-30" />
           
           <div className="space-y-12">
-            {experiences.map((exp, idx) => (
+            {experienceData.map((exp, idx) => (
               <motion.div
                 key={exp.id}
                 initial={{ opacity: 0, x: idx % 2 === 0 ? -50 : 50 }}
@@ -46,9 +56,11 @@ export const Experience = () => {
                       <span className="text-sm font-medium">{exp.company}</span>
                     </div>
                     
-                    <p className="text-text-muted leading-relaxed text-sm">
-                      {exp.description}
-                    </p>
+                    {exp.description && (
+                      <p className="text-text-muted leading-relaxed text-sm">
+                        {exp.description}
+                      </p>
+                    )}
                   </Card>
                 </div>
               </motion.div>
