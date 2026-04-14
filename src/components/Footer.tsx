@@ -1,57 +1,26 @@
-import { Flex, IconButton, SmartLink, Text } from "@once-ui-system/core";
-import { person, social } from "@/resources";
-import styles from "./Footer.module.scss";
+import { profile } from '../data/profile';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
-
+  
   return (
-    <Flex
-      as="footer"
-      fillWidth
-      padding="8"
-      horizontal="center"
-      mobileDirection="column"
-    >
-      <Flex
-        className={styles.mobile}
-        maxWidth="m"
-        paddingY="8"
-        paddingX="16"
-        gap="16"
-        horizontal="space-between"
-        vertical="center"
-      >
-        <Text variant="body-default-s" onBackground="neutral-strong">
-          <Text onBackground="neutral-weak">© {currentYear} /</Text>
-          <Text paddingX="4">{person.name}</Text>
-          <Text onBackground="neutral-weak">
-            {/* Usage of this template requires attribution. Please don't remove the link to Once UI. */}
-            / Build your portfolio with{" "}
-            <SmartLink
-              href="https://once-ui.com/products/magic-portfolio"
-            >
-              Once UI
-            </SmartLink>
-          </Text>
-        </Text>
-        <Flex gap="16">
-          {social.map(
-            (item) =>
-              item.link && (
-                <IconButton
-                  key={item.name}
-                  href={item.link}
-                  icon={item.icon}
-                  tooltip={item.name}
-                  size="s"
-                  variant="ghost"
-                />
-              ),
-          )}
-        </Flex>
-      </Flex>
-      <Flex height="80" show="s"></Flex>
-    </Flex>
+    <footer className="py-12 border-t border-surface-border/30 relative z-10">
+      <div className="container mx-auto px-6 max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <p className="text-sm font-medium tracking-tight">
+            {profile.name.split(' ')[0]}<span className="text-primary">.dev</span>
+          </p>
+        </div>
+        
+        <p className="text-text-muted text-sm text-center">
+          &copy; {currentYear} • Tutku ve hassasiyetle el yapımı olarak üretildi.
+        </p>
+        
+        <div className="flex items-center gap-6">
+          <a href="#hero" className="text-sm text-text-muted hover:text-text-main transition-colors">Başa dön</a>
+          <a href={profile.socials.github} target="_blank" rel="noreferrer" className="text-sm text-text-muted hover:text-text-main transition-colors">GitHub</a>
+        </div>
+      </div>
+    </footer>
   );
 };
