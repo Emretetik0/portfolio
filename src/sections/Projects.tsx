@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { SectionHeader } from '../components/SectionHeader';
-import { fetchProjects, GitHubRepo } from '../lib/github';
+import { fetchProjects, type GitHubRepo } from '../lib/github';
 import { Card } from '../components/Card';
 import { Badge } from '../components/Badge';
 import { Button } from '../components/Button';

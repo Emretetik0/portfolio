@@ -10,7 +10,7 @@ export interface GitHubRepo {
 }
 
 const USERNAME = 'Emretetik0';
-const TARGET_REPOS = ['autofix', 'portfolio', 'nextjs-commerce'];
+const TARGET_REPOS = ['ExamLens', 'autofix', 'portfolio', 'nextjs-commerce'];
 
 export async function fetchProjects(): Promise<GitHubRepo[]> {
   try {
