@@ -10,33 +10,33 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "1",
-    title: "SaaS Dashboard Pro",
-    description: "SaaS işletmeleri için gerçek zamanlı veri görselleştirme, karanlık mod ve yüksek hızda yanıt veren modüler bir düzen sunan üst düzey analitik panosu.",
-    stack: ["React", "TypeScript", "Tailwind CSS", "Recharts"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com"
+    title: "ExamLens",
+    description: "PDR rehber öğretmenleri için deneme sınavı performans ve trend analizi platformu. Excel notlarını işler, matematik açığı ve ani düşüş trendi olan kritik öğrencileri anlık tespit eder.",
+    stack: ["Next.js 16", "TypeScript", "Zustand", "Tailwind CSS", "Recharts"],
+    githubUrl: "https://github.com/Emretetik0/ExamLens",
+    liveUrl: "https://exam-lens-alpha.vercel.app"
   },
   {
     id: "2",
-    title: "E-Ticaret Platformu",
-    description: "Modern bir headless e-ticaret mağaza ön yüzü. Kesintisiz ödeme deneyimi ve dinamik ürün filtreleme ile yüksek performans için geliştirildi.",
-    stack: ["Next.js", "TypeScript", "Stripe", "Framer Motion"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com"
+    title: "Autofix",
+    description: "Modern oto servis ve bakım randevu yönetim platformu. Müşteriler için hızlı randevu alma, kapsamlı yönetici (admin) paneli, dinamik servis kataloğu ve koyu/açık tema desteği.",
+    stack: ["Next.js 15", "React 19", "Prisma", "TypeScript", "Tailwind CSS"],
+    githubUrl: "https://github.com/Emretetik0/autofix",
+    liveUrl: "https://emretetik0.github.io/autofix/"
   },
   {
     id: "3",
-    title: "Geliştirici Portfolyo Şablonu",
-    description: "Geliştiricilerin çalışmalarını etkili bir şekilde sergilemeleri için tasarlanmış, özelleştirilebilir ve güzel animasyonlara sahip portfolyo şablonu.",
-    stack: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com"
+    title: "Modern Geliştirici Portföyü",
+    description: "Yüksek performanslı, interaktif ve modern animasyonlara sahip kişisel portföy web sitesi. Projeleri, yetenekleri ve iletişim kanallarını akıcı bir karanlık tema ile sergiler.",
+    stack: ["React 19", "Vite", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    githubUrl: "https://github.com/Emretetik0/portfolio",
+    liveUrl: "https://emretetik0.github.io/portfolio/"
   },
   {
     id: "4",
-    title: "Görev Yönetim Uygulaması",
-    description: "Sürükle-bırak işlevselliği, gerçek zamanlı güncellemeler ve şık bir karanlık kullanıcı arayüzüne sahip iş birlikçi bir Kanban panosu uygulaması.",
-    stack: ["React", "Redux Toolkit", "Firebase", "Tailwind"],
-    githubUrl: "https://github.com"
+    title: "Next.js E-Ticaret Vitrini",
+    description: "Modern headless mimari ve yüksek performanslı ürün filtreleme/sepet yetenekleriyle geliştirilmiş minimal ve şık e-ticaret vitrin platformu.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Responsive Design"],
+    githubUrl: "https://github.com/Emretetik0/nextjs-commerce"
   }
 ];
